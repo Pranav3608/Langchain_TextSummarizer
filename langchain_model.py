@@ -8,15 +8,15 @@ Original file is located at
 """
 
 !pip install openai
-openai_api_key = "c9c85510297b46f9b1133e9c9e6b89fc"
-openai_api_type = "azure"
-openai_api_version = '2022-12-01'
-openai_api_base = "https://summarise-langchain.openai.azure.com/"
-model_name="text-davinci-003"
+openai_api_key = "YOUR_OPENAI_API_KEY"
+openai_api_type = "AZURE"
+openai_api_version = 'YOUR_API_VERSION'
+openai_api_base = "YOUR_AZURE_ACCOUNT_OPENAI_ENDPOINT"
+model_name="YOUR_MODEL_NAME"
 
 !pip install langchain
 from langchain.llms import AzureOpenAI
-llm = AzureOpenAI(engine="langchain", model_name=model_name, temperature=0, openai_api_key=openai_api_key, openai_api_version=openai_api_version, openai_api_base=openai_api_base, openai_api_type=openai_api_type)
+llm = AzureOpenAI(engine="YOUR_ENGINE_NAME", model_name=model_name, temperature=0, openai_api_key=openai_api_key, openai_api_version=openai_api_version, openai_api_base=openai_api_base, openai_api_type=openai_api_type)
 
 from langchain.chains.summarize import load_summarize_chain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
